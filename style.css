@@ -1,41 +1,149 @@
-:root{
+:root {
   --saffron: #d97706;
   --gold-1: #f6c85f;
   --bg-soft: #fffaf5;
   --muted-dark: #222;
 }
-body{
+
+body {
   font-family: 'Noto Sans Telugu', 'Segoe UI', Roboto, sans-serif;
   background: var(--bg-soft);
   color: var(--muted-dark);
 }
-.site-header{ background: transparent; transition: background 300ms ease, box-shadow 300ms ease; }
-.site-header.scrolled{ background: rgba(255,255,255,0.98); box-shadow: 0 6px 18px rgba(18,18,18,0.08); }
-.navbar-brand .ashram-logo{ max-height:80px; width:auto; border-radius:8px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
-.navbar-brand .brand-text{ line-height:1; }
-.navbar-brand .line1{ font-weight:700; font-size:1rem; }
-.navbar-brand .line2{ font-weight:900; font-size:0.85rem; color:var(--saffron); }
-.navbar .nav-link{ color:var(--muted-dark); font-weight:600; padding:0.5rem 1rem; }
-.navbar .nav-link:hover{ color:var(--saffron); text-decoration:none; }
-.hero{ min-height:100vh; background-size:contain; background-repeat: no-repeat; background-position:center top; position:relative; display:flex; background: radial-gradient(circle at center, #fff8e7, #f5e0b7); animation: heroZoom 16s ease-in-out infinite alternate; }
-.hero .overlay{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.45)); }
-.heroimg{ height: 65vh; width: auto; max-width: 90%; object-fit: contain;}
-.hero-title{ font-weight:900; font-size:2.25rem; letter-spacing:0.6px; margin-bottom:0.25rem; background: linear-gradient(90deg, var(--gold-1), var(--saffron)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.hero-sub{ opacity:0.95; }
-.hero .btn{ box-shadow: 0 8px 30px rgba(0,0,0,0.18); }
-@keyframes heroZoom{ from{ transform: scale(1); } to{ transform: scale(1.02); } }
-.about-photo{ width: 100%; height: auto; max-height:none; object-fit:contain; }
-.bg-soft{ background: linear-gradient(180deg, #fffdfa, #fff8f2); }
-.event-card img{ height:200px; object-fit:contain; }
-.event-card .card-body{ background:rgba(255,255,255,0.9); }
-#yagam .ratio{ border: 6px solid rgba(246,200,95,0.18); }
-#gallery{ padding-bottom:80px; }
-.gallery-item{ height:220px; object-fit:cover; transition: transform 0.35s ease, box-shadow 0.35s ease; cursor:pointer; }
-.gallery-item:hover{ transform:translateY(-6px) scale(1.02); box-shadow: 0 14px 36px rgba(0,0,0,0.28); }
-.icon{ color:var(--saffron); font-size:1.05rem; }
-.footer-gradient{ background: linear-gradient(90deg, #7c2d12, #d97706); }
-@media (max-width: 767px){ .hero-title{ font-size:1.5rem; } .hero{ min-height:58vh; } .gallery-item{ height:160px; } }
-/* Wrapper fixed aspect ratio */
+
+/* Navbar */
+.site-header {
+  background: transparent;
+  transition: background 300ms ease, box-shadow 300ms ease;
+}
+.site-header.scrolled {
+  background: rgba(255,255,255,0.98);
+  box-shadow: 0 6px 18px rgba(18,18,18,0.08);
+}
+.navbar-brand .ashram-logo {
+  max-height: 80px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.navbar-brand .brand-text {
+  line-height: 1;
+}
+.navbar-brand .line1 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.navbar-brand .line2 {
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: var(--saffron);
+}
+.navbar .nav-link {
+  color: var(--muted-dark);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+.navbar .nav-link:hover {
+  color: var(--saffron);
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  display: flex;
+  background: radial-gradient(circle at center, #fff8e7, #f5e0b7);
+  animation: heroZoom 16s ease-in-out infinite alternate;
+}
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.45));
+}
+.hero-img {
+  height: auto;
+  max-width: 80%;
+  object-fit: contain;
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 2.25rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(90deg, var(--gold-1), var(--saffron));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  opacity: 0.95;
+}
+.hero .btn {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.02); }
+}
+
+/* About section */
+.about-photo {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+/* Backgrounds */
+.bg-soft {
+  background: linear-gradient(180deg, #fffdfa, #fff8f2);
+}
+
+/* Events */
+.event-card img {
+  height: 200px;
+  object-fit: contain;
+}
+.event-card .card-body {
+  background: rgba(255,255,255,0.9);
+}
+
+/* Yagam video */
+#yagam .ratio {
+  border: 6px solid rgba(246,200,95,0.18);
+}
+
+/* Gallery */
+#gallery {
+  padding-bottom: 80px;
+}
+.gallery-item {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.28);
+}
+
+/* Icons */
+.icon {
+  color: var(--saffron);
+  font-size: 1.05rem;
+}
+
+/* Footer */
+.footer-gradient {
+  background: linear-gradient(90deg, #7c2d12, #d97706);
+}
+
+/* Gallery wrapper fixed aspect ratio */
 .gallery-wrapper {
   position: relative;
   width: 100%;
@@ -43,28 +151,75 @@ body{
   overflow: hidden;
   border-radius: 8px;
 }
-
 .gallery-wrapper img {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Default: neat fill look */
-  object-position: center; /* Center focus */
+  object-fit: contain;
+  object-position: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
 }
-
-/* Mobile & small screens: show full image */
-@media (max-width: 768px) {
-  .gallery-wrapper img {
-    object-fit: contain;
-    background-color: #000; /* avoid blank white */
-  }
-}
-
 .gallery-wrapper img:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 14px 36px rgba(0,0,0,0.28);
 }
 
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  /* Navbar logo scaling */
+  .navbar-brand .ashram-logo {
+    max-height: 50px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 60vh;
+    padding-top: 60px;
+    text-align: center;
+  }
+  .hero img.hero-img {
+    max-width: 90%;
+    height: auto;
+  }
+  .hero-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  /* About image */
+  .about-photo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Event cards */
+  .event-card img {
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  /* Gallery layout */
+  .gallery-wrapper {
+    padding-top: 65%;
+  }
+  .gallery-wrapper img {
+    object-fit: cover;
+    background-color: #000;
+  }
+
+  /* Text wrapping */
+  body {
+    word-break: break-word;
+  }
+
+  /* Gallery item size tweak */
+  .gallery-item {
+    height: 160px;
+  }
+}
