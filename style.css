@@ -14,17 +14,25 @@ body {
 /* Navbar */
 .site-header {
   background: transparent;
-  transition: background 300ms ease, box-shadow 300ms ease;
+  transition: background 300ms ease, box-shadow 300ms ease, padding 300ms ease;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .site-header.scrolled {
   background: rgba(255,255,255,0.98);
   box-shadow: 0 6px 18px rgba(18,18,18,0.08);
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 .navbar-brand .ashram-logo {
   max-height: 80px;
   width: auto;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: max-height 0.3s ease;
+}
+.site-header.scrolled .ashram-logo {
+  max-height: 45px;
 }
 .navbar-brand .brand-text {
   line-height: 1;
@@ -175,13 +183,15 @@ body {
 
   /* Hero */
   .hero {
-    min-height: 60vh;
-    padding-top: 60px;
+    min-height: auto;
+    padding-top: 80px;
     text-align: center;
   }
-  .hero img.hero-img {
-    max-width: 90%;
+  .hero-img {
+    width: 100%;
     height: auto;
+    max-height: 50vh; /* Prevent image from taking full screen */
+    object-fit: contain;
   }
   .hero-title {
     font-size: 1.4rem;
