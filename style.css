@@ -209,9 +209,10 @@ body {
 
   /* Event cards */
   .event-card img {
-    height: auto;
-    max-height: 180px;
-    object-fit: cover;
+    height: auto !important;
+    max-height: none !important;
+    width: 100%;
+    object-fit: contain !important;
   }
 
   /* Gallery layout */
@@ -219,17 +220,19 @@ body {
     padding-top: 65%;
   }
   .gallery-wrapper img {
-    object-fit: cover;
+    object-fit: contain !important;
     background-color: #000;
+  }
+
+  /* Gallery items */
+  .gallery-item {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
   }
 
   /* Text wrapping */
   body {
     word-break: break-word;
-  }
-
-  /* Gallery item size tweak */
-  .gallery-item {
-    height: 160px;
   }
 }
