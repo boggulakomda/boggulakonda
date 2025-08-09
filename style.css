@@ -115,6 +115,7 @@ body {
 .event-card img {
   height: 200px;
   object-fit: contain;
+  width: 100%;
 }
 .event-card .card-body {
   background: rgba(255,255,255,0.9);
@@ -134,6 +135,7 @@ body {
   object-fit: cover;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
+  width: 100%;
 }
 .gallery-item:hover {
   transform: translateY(-6px) scale(1.02);
@@ -207,28 +209,31 @@ body {
     height: auto;
   }
 
-  /* Event cards */
+  /* Event cards images */
   .event-card img {
     height: auto !important;
     max-height: none !important;
-    width: 100%;
+    width: 100% !important;
     object-fit: contain !important;
   }
 
-  /* Gallery layout */
+  /* Gallery wrapper */
   .gallery-wrapper {
     padding-top: 65%;
   }
-  .gallery-wrapper img {
-    object-fit: contain !important;
-    background-color: #000;
-  }
 
-  /* Gallery items */
+  /* Gallery item */
   .gallery-item {
     height: auto !important;
     max-height: none !important;
+    width: 100% !important;
     object-fit: contain !important;
+  }
+
+  /* Gallery images */
+  .gallery-wrapper img {
+    object-fit: contain !important;
+    background-color: #000;
   }
 
   /* Text wrapping */
